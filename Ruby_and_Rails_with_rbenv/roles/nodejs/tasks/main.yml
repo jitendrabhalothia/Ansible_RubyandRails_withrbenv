@@ -1,0 +1,8 @@
+---
+- name: Add the Node.js PPA to apt-get
+  apt_repository:  repo={{ Nodejs_PPA }}
+
+- name: update cache
+  apt: name=nodejs  
+
+

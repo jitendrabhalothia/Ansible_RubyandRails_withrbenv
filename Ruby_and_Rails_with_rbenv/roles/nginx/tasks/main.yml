@@ -1,0 +1,4 @@
+---
+- name: Install required software
+  apt: name=nginx state=present update_cache=no
+

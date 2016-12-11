@@ -1,0 +1,9 @@
+
+repo_rbenv: git://github.com/sstephenson/rbenv.git
+repo_ruby_build: git://github.com/sstephenson/ruby-build.git
+
+rbenv_directory: /home/ubuntu/.rbenv
+Ruby_build_directory: /home/ubuntu/.rbenv/plugins/ruby-build
+
+bash_profile: /home/ubuntu/.bash_profile
+

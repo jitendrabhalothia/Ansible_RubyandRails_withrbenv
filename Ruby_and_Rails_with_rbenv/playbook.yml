@@ -1,0 +1,12 @@
+---  
+- hosts: autogrid
+  connection: ssh
+  remote_user: ubuntu
+  gather_facts: yes
+  become: yes
+  roles:
+  - Prerequisites 
+  - rbenv
+  - gem
+  - nodejs
+  - nginx

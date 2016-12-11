@@ -1,0 +1,8 @@
+---
+- name: Gem Actions
+  gem: name={{item}}  executable=/home/ubuntu/.rbenv/shims/gem  state=latest
+  items:
+  - rails
+  - bundler
+  
+

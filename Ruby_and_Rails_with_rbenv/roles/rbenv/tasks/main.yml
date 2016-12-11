@@ -1,0 +1,23 @@
+---
+- name: cloning git repo for rbenv
+  git: repo={{ repo_rbenv }}  dest={{ rbenv_directory }}
+
+- name: add gpg key
+  command: echo gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3  ## Module name apt_key is not working
+
+- name: rbenv
+  shell: echo  'export PATH="$HOME/.rbenv/bin:$PATH"' >> {{ bash_profile }}
+
+- name: rbenv init
+  shell: echo 'eval "$(rbenv init -)"' >> {{ bash_profile }}
+
+- name: Cloning git repo for ruby_build
+  git: repo={{ repo_ruby_build }} dest={{ Ruby_build_directory }}
+
+
+- name: ruby-build
+  shell: echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"'  >> {{ bash_profile }}
+    
+- name: update the .bash_profile file 
+  command: source /home/ubuntu/.bash_profile  executable=/bin/bash
+

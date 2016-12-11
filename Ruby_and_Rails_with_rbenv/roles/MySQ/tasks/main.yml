@@ -1,0 +1,6 @@
+- name: Install required software
+  apt: name={{ item }} state=present
+  with_items: 
+    - mysql-server
+    - mysql-client
+    - libmysqlclient-dev
